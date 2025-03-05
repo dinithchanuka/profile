@@ -167,7 +167,7 @@ const Skills = () => {
                   <h4 className={`font-semibold ${darkMode ? 'text-white' : 'text-gray-800'}`}>AR/VR Integration</h4>
                 </div>
                 <p className={darkMode ? 'text-gray-300' : 'text-gray-600'}>
-                  Specialized in implementing augmented reality features in mobile applications using ARCore and Flutter.
+                  Specialized in implementing augmented reality features in mobile applications using ARCore.
                 </p>
               </div>
               
@@ -178,10 +178,10 @@ const Skills = () => {
               }`}>
                 <div className="flex items-center mb-3">
                   <Cpu className={`w-6 h-6 mr-2 ${darkMode ? 'text-green-400' : 'text-green-600'}`} />
-                  <h4 className={`font-semibold ${darkMode ? 'text-white' : 'text-gray-800'}`}>Full-Stack Mobile</h4>
+                  <h4 className={`font-semibold ${darkMode ? 'text-white' : 'text-gray-800'}`}>R&D</h4>
                 </div>
                 <p className={darkMode ? 'text-gray-300' : 'text-gray-600'}>
-                  Experienced in connecting mobile apps with backend services, APIs, and databases for complete solutions.
+                Skilled in R&D, transforming research insights into innovative, scalable solutions.
                 </p>
               </div>
             </div>
