@@ -1,7 +1,6 @@
-import React from 'react';
 import { useTheme } from '../context/ThemeContext';
 import { AndroidIcon, FlutterIcon, KotlinIcon, AppleIcon } from './TechIcons';
-import { Code, Database, Cpu, Layers, PenTool as Tool, Palette, Terminal, Server, Zap } from 'lucide-react';
+import { Code, Database, Cpu, Layers, PenTool as Tool, Terminal, Server, Zap } from 'lucide-react';
 
 const Skills = () => {
   const { darkMode } = useTheme();
@@ -35,7 +34,7 @@ const Skills = () => {
   ];
 
   // Function to get icon for specific skills
-  const getSkillIcon = (skill) => {
+  const getSkillIcon = (skill: any) => {
     if (skill === 'Kotlin') return <KotlinIcon className={`w-5 h-5 ${darkMode ? 'text-purple-400' : 'text-purple-600'}`} />;
     if (skill === 'Android SDK' || skill === 'Android Studio' || skill === 'Java') return <AndroidIcon className={`w-5 h-5 ${darkMode ? 'text-green-400' : 'text-green-600'}`} />;
     if (skill === 'Flutter' || skill.includes('Flutter')) return <FlutterIcon className={`w-5 h-5 ${darkMode ? 'text-blue-400' : 'text-blue-600'}`} />;
