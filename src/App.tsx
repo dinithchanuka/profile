@@ -9,10 +9,11 @@ import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { useTheme } from './context/ThemeContext';
+import Publications from './components/Publications';
 
 function App() {
   const { darkMode } = useTheme();
-  
+
   return (
     <div className={`min-h-screen ${darkMode ? 'bg-dark-200 text-gray-100' : 'bg-gray-50 text-gray-800'} transition-colors duration-300`}>
       <Header />
@@ -20,6 +21,7 @@ function App() {
         <Hero />
         <About />
         <Projects />
+        <Publications />
         <Skills />
         <Experience />
         <Education />
