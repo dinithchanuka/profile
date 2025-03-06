@@ -1,10 +1,10 @@
 import React from 'react';
-import { GraduationCap, Calendar } from 'lucide-react';
+import { GraduationCap, Calendar, Award } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 
 const Education = () => {
   const { darkMode } = useTheme();
-  
+
   const educationList = [
     {
       degree: 'Master of Computer Science',
@@ -20,62 +20,113 @@ const Education = () => {
     }
   ];
 
+  const certificates = [
+    {
+      name: 'Fundamentals of Digital Marketing',
+      issuer: 'Google Digital Garage',
+      provider: 'Google'
+    },
+    {
+      name: 'Java for Android',
+      issuer: 'Coursera',
+      provider: 'Vanderbilt University'
+    },
+    {
+      name: 'Mobile App Marketing',
+      issuer: 'Udemy',
+      provider: 'Udemy'
+    },
+    {
+      name: 'Kotlin for Java Developers',
+      issuer: 'Coursera',
+      provider: 'Vanderbilt University',
+      status: 'On Going'
+    }
+  ];
+
   return (
-    <section id="education" className={`py-20 ${
-      darkMode ? 'bg-dark-200' : 'bg-gray-50'
-    }`}>
+    <section id="education" className={`py-20 ${darkMode ? 'bg-gradient-to-b from-dark-100 to-dark-200' : 'bg-gradient-to-b from-indigo-50 to-white'
+      }`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className={`text-3xl font-bold text-center mb-2 ${
-          darkMode ? 'text-white' : 'text-gray-800'
-        }`}>Education</h2>
+        <h2 className={`text-3xl font-bold text-center mb-2 ${darkMode ? 'text-white' : 'text-gray-800'
+          }`}>Education</h2>
         <div className="w-20 h-1 bg-blue-600 mx-auto mb-12"></div>
-        
-        <div className="max-w-3xl mx-auto">
-          <div className="space-y-12">
-            {educationList.map((education, index) => (
-              <div key={index} className="relative pl-8 md:pl-0">
-                <div className="md:flex items-start">
-                  <div className="hidden md:block md:w-1/4 pr-8">
-                    <div className="flex items-center justify-end">
+
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Education Section */}
+            <div className="space-y-8">
+              <h3 className={`text-2xl font-semibold mb-6 flex items-center ${darkMode ? 'text-blue-400' : 'text-blue-700'
+                }`}>
+                <GraduationCap className="mr-2" />
+                Academic Education
+              </h3>
+
+              {educationList.map((education, index) => (
+                <div key={index} className="relative pl-8">
+                  <div className={`absolute left-0 top-0 w-6 h-6 rounded-full flex items-center justify-center ${darkMode ? 'bg-blue-600' : 'bg-blue-600'
+                    }`}>
+                    <GraduationCap size={14} className="text-white" />
+                  </div>
+
+                  <div className={`p-6 rounded-lg shadow-md transition-all duration-300 hover:scale-[1.02] ${darkMode
+                      ? 'bg-dark-300/80 shadow-black/20 border border-dark-100 backdrop-blur-sm'
+                      : 'bg-white/90 shadow-lg backdrop-blur-sm'
+                    }`}>
+                    <div className="flex items-center mb-2">
                       <Calendar size={18} className={darkMode ? 'text-blue-400 mr-2' : 'text-blue-600 mr-2'} />
                       <span className={darkMode ? 'text-gray-300' : 'text-gray-600'}>{education.period}</span>
                     </div>
-                  </div>
-                  
-                  <div className="absolute left-0 top-0 md:relative md:left-auto md:top-auto">
-                    <div className="md:hidden flex items-center mb-2">
-                      <Calendar size={18} className={darkMode ? 'text-blue-400 mr-2' : 'text-blue-600 mr-2'} />
-                      <span className={darkMode ? 'text-gray-300' : 'text-gray-600'}>{education.period}</span>
-                    </div>
-                    <div className={`h-full w-0.5 absolute left-0 top-8 md:hidden ${
-                      darkMode ? 'bg-dark-100' : 'bg-blue-200'
-                    }`}></div>
-                    <div className={`w-6 h-6 rounded-full flex items-center justify-center md:hidden ${
-                      darkMode ? 'bg-blue-600' : 'bg-blue-600'
-                    }`}>
-                      <GraduationCap size={14} className="text-white" />
-                    </div>
-                  </div>
-                  
-                  <div className={`md:w-3/4 p-6 rounded-lg shadow-md ${
-                    darkMode ? 'bg-dark-100 shadow-black/20' : 'bg-white'
-                  }`}>
-                    <div className={`hidden md:flex absolute -left-3 top-6 w-6 h-6 rounded-full items-center justify-center ${
-                      darkMode ? 'bg-blue-600' : 'bg-blue-600'
-                    }`}>
-                      <GraduationCap size={14} className="text-white" />
-                    </div>
-                    <h3 className={`text-xl font-bold ${
-                      darkMode ? 'text-white' : 'text-gray-800'
-                    }`}>{education.degree}</h3>
-                    <h4 className={`text-lg mb-2 ${
-                      darkMode ? 'text-blue-400' : 'text-blue-600'
-                    }`}>{education.institution}</h4>
+
+                    <h3 className={`text-xl font-bold ${darkMode ? 'text-white' : 'text-gray-800'
+                      }`}>{education.degree}</h3>
+                    <h4 className={`text-lg mb-2 ${darkMode ? 'text-blue-400' : 'text-blue-600'
+                      }`}>{education.institution}</h4>
                     <p className={darkMode ? 'text-gray-300' : 'text-gray-600'}>{education.description}</p>
                   </div>
                 </div>
+              ))}
+            </div>
+
+            {/* Certificates Section */}
+            <div>
+              <h3 className={`text-2xl font-semibold mb-6 flex items-center ${darkMode ? 'text-blue-400' : 'text-blue-700'
+                }`}>
+                <Award className="mr-2" />
+                Certifications
+              </h3>
+
+              <div className="grid gap-4">
+                {certificates.map((cert, index) => (
+                  <div
+                    key={index}
+                    className={`p-6 rounded-lg shadow-md transition-all duration-300 hover:scale-[1.02] ${darkMode
+                        ? 'bg-dark-300/80 shadow-black/20 border border-dark-100 backdrop-blur-sm'
+                        : 'bg-white/90 shadow-lg backdrop-blur-sm'
+                      }`}
+                  >
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <h4 className={`text-lg font-semibold mb-1 ${darkMode ? 'text-white' : 'text-gray-800'
+                          }`}>{cert.name}</h4>
+                        <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'
+                          }`}>
+                          via {cert.issuer} from {cert.provider}
+                        </p>
+                      </div>
+                      {cert.status && (
+                        <span className={`px-3 py-1 rounded-full text-xs font-medium ${darkMode
+                            ? 'bg-blue-900/30 text-blue-400 border border-blue-800'
+                            : 'bg-blue-100 text-blue-800'
+                          }`}>
+                          {cert.status}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </div>

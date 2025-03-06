@@ -9,23 +9,30 @@ const Experience = () => {
       company: 'SoftcodeIT Solutions',
       position: 'Software Engineer',
       period: 'May 2022 - Present',
-      responsibilities: ['Requirement gathering, technical specification development, and full-stack mobile application development.', 'Successfully deployed applications to the App Store and Play Store.'],
-      responsibility0: 'Requirement gathering, technical specification development, and full-stack mobile application development.',
-      responsibility1: 'Successfully deployed applications to the App Store and Play Store.',
-      responsibility2: 'Conducted research and development on AR/VR technologies, implementing ARCore.',
-      responsibility3: 'Designed scalable app architectures and optimized performance.',
-      projects: 'AirGrab (Kotlin & Flutter), Plurbo (Flutter), IDEAHub (Flutter)',
-      highlightIcon: <Code size={20} className={darkMode ? 'text-blue-400' : 'text-blue-600'} />
+      responsibilities: [
+        'Led requirement gathering sessions and translated client needs into technical specifications.',
+        'Managed end-to-end development of mobile applications, from design to deployment.',
+        'Successfully deployed applications to Google Play Store and Apple App Store, ensuring compliance with platform guidelines.',
+        'Conducted extensive research into AR/VR technologies, implementing ARCore for immersive user experiences.',
+        'Designed scalable app architectures and optimized performance to enhance stability and user experience.',
+        'Developed new features and enhanced functionalities for existing applications based on client and user requirements.',
+        'Identified, debugged, and resolved issues, ensuring smooth functionality and improved app stability.',
+        'Collaborated with cross-functional teams to develop innovative mobile solutions.'
+      ],
+      projects: 'AirGrab - Catch & Throw, AirGrab (Prototype), Plurbo, IDEAHub',
+      highlightIcon: <Server size={20} className={darkMode ? 'text-green-400' : 'text-green-600'} />
     },
     {
       company: 'ESOFT Technologies',
       position: 'Software Engineer / Associate Software Engineer',
       period: 'July 2020 - May 2022',
-      responsibilities: [],
-      responsibility0: 'Developed and deployed native Android applications for POS systems.',
-      responsibility1: 'Led UI design initiatives and collaborated with cross-functional teams.',
-      responsibility2: 'Conducted extensive testing, debugging, and user training.',
-      responsibility3: 'Led R&D efforts for a custom SDK for Point-of-Sale (POS) devices.',
+      responsibilities: [
+        'Designed and optimized database architectures for efficient data storage, management, and retrieval.',
+        'Developed intuitive, user-friendly, and visually appealing UI designs to enhance user experience.',
+        'Conducted rigorous testing to identify and resolve bugs, ensuring high-quality and stable applications.',
+        'Spearheaded research and development to create an internal SDK for POS devices, improving compatibility and efficiency.',
+        'Collaborated with cross-functional teams to define specifications and ensure solutions met industry standards and company needs.'
+      ],
       projects: 'CloudPOS (Android - JAVA), Restaurant POS (Android - JAVA), ESOFT Digital Campus (Flutter)',
       technologies: 'Retrofit, Glide, Dagger-Hilt, Eventbus, Firebase Crashlytics/Analytics/Push Notifications, Microsoft Auth',
       highlightIcon: <Server size={20} className={darkMode ? 'text-green-400' : 'text-green-600'} />
@@ -34,14 +41,15 @@ const Experience = () => {
       company: 'Ceylon Electricity Board',
       position: 'Intern Software Engineer',
       period: 'August 2019 - February 2020',
-      responsibilities: [],
-      responsibility0: 'Led project implementations and conducted user training sessions.',
-      // responsibility1: '',
-      // responsibility2: '',
-      // responsibility3: '',
+      responsibilities: [
+        'Gathered actionable user requirements through targeted field research to shape development priorities.',
+        'Developed and maintained the Android application, including feature development, debugging, and testing.',
+        'Created and modified APIs to support the application\'s functionality.',
+        'Conducted comprehensive user training sessions to ensure effective and efficient application usage.'
+      ],
       projects: 'MVMMS (Android - JAVA)',
       technologies: 'RESTful Web Services, Google Maps, GPS',
-      highlightIcon: <Cpu size={20} className={darkMode ? 'text-purple-400' : 'text-purple-600'} />
+      highlightIcon: <Server size={20} className={darkMode ? 'text-green-400' : 'text-green-600'} />
     }
   ];
 
@@ -120,6 +128,8 @@ const Experience = () => {
                         <CheckCircle className="inline-block mr-2 w-4 h-4 -ml-6" />{responsibility}
                       </p>
                     ))}
+
+                    <div className="h-8"></div>
 
                     <div className="mb-4">
                       <h5 className={`font-semibold mb-1 ${darkMode ? 'text-gray-200' : 'text-gray-700'

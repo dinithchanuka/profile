@@ -5,7 +5,7 @@ import { Code, Database, Cpu, Layers, PenTool as Tool, Palette, Terminal, Server
 
 const Skills = () => {
   const { darkMode } = useTheme();
-  
+
   const skillCategories = [
     {
       category: 'Programming Languages',
@@ -44,15 +44,13 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className={`py-20 ${
-      darkMode ? 'bg-gradient-to-b from-dark-200 to-dark-100' : 'bg-gradient-to-b from-gray-50 to-white'
-    }`}>
+    <section id="skills" className={`py-20 ${darkMode ? 'bg-gradient-to-b from-dark-200 to-dark-100' : 'bg-gradient-to-b from-gray-50 to-white'
+      }`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className={`text-3xl font-bold text-center mb-2 ${
-          darkMode ? 'text-white' : 'text-gray-800'
-        }`}>Skills</h2>
+        <h2 className={`text-3xl font-bold text-center mb-2 ${darkMode ? 'text-white' : 'text-gray-800'
+          }`}>Skills</h2>
         <div className="w-20 h-1 bg-blue-600 mx-auto mb-12"></div>
-        
+
         {/* Tech circuit background */}
         <div className="max-w-5xl mx-auto relative">
           <div className="absolute inset-0 overflow-hidden opacity-10 pointer-events-none">
@@ -68,56 +66,50 @@ const Skills = () => {
               </svg>
             </div>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
             {skillCategories.map((category, categoryIndex) => (
-              <div 
-                key={categoryIndex} 
-                className={`rounded-xl overflow-hidden transition-all duration-300 transform hover:-translate-y-1 ${
-                  darkMode 
-                    ? 'bg-dark-200/80 shadow-lg shadow-black/20 border border-dark-100 backdrop-blur-sm' 
+              <div
+                key={categoryIndex}
+                className={`rounded-xl overflow-hidden transition-all duration-300 transform hover:-translate-y-1 ${darkMode
+                    ? 'bg-dark-200/80 shadow-lg shadow-black/20 border border-dark-100 backdrop-blur-sm'
                     : 'bg-white/90 shadow-md hover:shadow-blue-100 backdrop-blur-sm'
-                }`}
+                  }`}
               >
-                <div className={`h-1 ${
-                  categoryIndex % 5 === 0 
-                    ? 'bg-blue-500' 
-                    : categoryIndex % 5 === 1 
-                      ? 'bg-purple-500' 
+                <div className={`h-1 ${categoryIndex % 5 === 0
+                    ? 'bg-blue-500'
+                    : categoryIndex % 5 === 1
+                      ? 'bg-purple-500'
                       : categoryIndex % 5 === 2
                         ? 'bg-green-500'
                         : categoryIndex % 5 === 3
                           ? 'bg-yellow-500'
                           : 'bg-red-500'
-                }`}></div>
+                  }`}></div>
                 <div className="p-6">
                   <div className="flex items-center mb-4">
-                    <div className={`p-3 rounded-lg mr-3 ${
-                      darkMode ? 'bg-dark-300' : 'bg-blue-100'
-                    }`}>
+                    <div className={`p-3 rounded-lg mr-3 ${darkMode ? 'bg-dark-300' : 'bg-blue-100'
+                      }`}>
                       {category.icon}
                     </div>
-                    <h3 className={`text-xl font-bold ${
-                      darkMode ? 'text-white' : 'text-gray-800'
-                    }`}>{category.category}</h3>
+                    <h3 className={`text-xl font-bold ${darkMode ? 'text-white' : 'text-gray-800'
+                      }`}>{category.category}</h3>
                   </div>
-                  
+
                   <div className="flex flex-wrap gap-2">
                     {category.skills.map((skill, skillIndex) => (
-                      <div 
-                        key={skillIndex} 
-                        className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105 ${
-                          darkMode 
-                            ? 'bg-dark-300 hover:bg-blue-900/30 hover:border-blue-500/50 border border-transparent' 
+                      <div
+                        key={skillIndex}
+                        className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105 ${darkMode
+                            ? 'bg-dark-300 hover:bg-blue-900/30 hover:border-blue-500/50 border border-transparent'
                             : 'bg-gray-50 hover:bg-blue-50 hover:border-blue-200 border border-transparent'
-                        }`}
+                          }`}
                       >
                         {getSkillIcon(skill) && (
                           <span className="flex-shrink-0">{getSkillIcon(skill)}</span>
                         )}
-                        <span className={`${
-                          darkMode ? 'text-gray-300' : 'text-gray-700'
-                        }`}>{skill}</span>
+                        <span className={`${darkMode ? 'text-gray-300' : 'text-gray-700'
+                          }`}>{skill}</span>
                       </div>
                     ))}
                   </div>
@@ -125,29 +117,25 @@ const Skills = () => {
               </div>
             ))}
           </div>
-          
-          <div className={`mt-12 p-6 rounded-xl ${
-            darkMode 
-              ? 'bg-gradient-to-r from-dark-200 to-dark-300 border border-dark-100' 
+
+          <div className={`mt-12 p-6 rounded-xl ${darkMode
+              ? 'bg-gradient-to-r from-dark-200 to-dark-300 border border-dark-100'
               : 'bg-gradient-to-r from-blue-50 to-indigo-50'
-          }`}>
+            }`}>
             <div className="flex items-center mb-6">
-              <div className={`p-3 rounded-lg mr-3 ${
-                darkMode ? 'bg-dark-300' : 'bg-blue-100'
-              }`}>
+              <div className={`p-3 rounded-lg mr-3 ${darkMode ? 'bg-dark-300' : 'bg-blue-100'
+                }`}>
                 <Zap size={20} className={darkMode ? 'text-blue-400' : 'text-blue-600'} />
               </div>
-              <h3 className={`text-xl font-bold ${
-                darkMode ? 'text-white' : 'text-gray-800'
-              }`}>Tech Specializations</h3>
+              <h3 className={`text-xl font-bold ${darkMode ? 'text-white' : 'text-gray-800'
+                }`}>Tech Specializations</h3>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className={`p-4 rounded-lg transition-transform hover:scale-105 ${
-                darkMode 
-                  ? 'bg-gradient-to-br from-dark-300 to-dark-200 border border-dark-100' 
+              <div className={`p-4 rounded-lg transition-transform hover:scale-105 ${darkMode
+                  ? 'bg-gradient-to-br from-dark-300 to-dark-200 border border-dark-100'
                   : 'bg-white shadow-sm'
-              }`}>
+                }`}>
                 <div className="flex items-center mb-3">
                   <Terminal className={`w-6 h-6 mr-2 ${darkMode ? 'text-purple-400' : 'text-purple-600'}`} />
                   <h4 className={`font-semibold ${darkMode ? 'text-white' : 'text-gray-800'}`}>Mobile Development</h4>
@@ -156,12 +144,11 @@ const Skills = () => {
                   Expert in native Android and cross-platform Flutter development with a focus on performance optimization.
                 </p>
               </div>
-              
-              <div className={`p-4 rounded-lg transition-transform hover:scale-105 ${
-                darkMode 
-                  ? 'bg-gradient-to-br from-dark-300 to-dark-200 border border-dark-100' 
+
+              <div className={`p-4 rounded-lg transition-transform hover:scale-105 ${darkMode
+                  ? 'bg-gradient-to-br from-dark-300 to-dark-200 border border-dark-100'
                   : 'bg-white shadow-sm'
-              }`}>
+                }`}>
                 <div className="flex items-center mb-3">
                   <Server className={`w-6 h-6 mr-2 ${darkMode ? 'text-blue-400' : 'text-blue-600'}`} />
                   <h4 className={`font-semibold ${darkMode ? 'text-white' : 'text-gray-800'}`}>AR/VR Integration</h4>
@@ -170,18 +157,17 @@ const Skills = () => {
                   Specialized in implementing augmented reality features in mobile applications using ARCore.
                 </p>
               </div>
-              
-              <div className={`p-4 rounded-lg transition-transform hover:scale-105 ${
-                darkMode 
-                  ? 'bg-gradient-to-br from-dark-300 to-dark-200 border border-dark-100' 
+
+              <div className={`p-4 rounded-lg transition-transform hover:scale-105 ${darkMode
+                  ? 'bg-gradient-to-br from-dark-300 to-dark-200 border border-dark-100'
                   : 'bg-white shadow-sm'
-              }`}>
+                }`}>
                 <div className="flex items-center mb-3">
                   <Cpu className={`w-6 h-6 mr-2 ${darkMode ? 'text-green-400' : 'text-green-600'}`} />
                   <h4 className={`font-semibold ${darkMode ? 'text-white' : 'text-gray-800'}`}>R&D</h4>
                 </div>
                 <p className={darkMode ? 'text-gray-300' : 'text-gray-600'}>
-                Skilled in R&D, transforming research insights into innovative, scalable solutions.
+                  Skilled in R&D, transforming research insights into innovative, scalable solutions.
                 </p>
               </div>
             </div>

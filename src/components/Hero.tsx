@@ -59,7 +59,7 @@ const Hero = () => {
             </span>
             <span className="mx-3 inline-block">•</span>
             <span className="inline-block">
-              Senior Software Engineer
+              Software Engineer
             </span>
           </div>
 
