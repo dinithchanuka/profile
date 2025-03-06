@@ -16,7 +16,7 @@ const Education = () => {
       institution: 'University of Colombo School of Computing',
       period: '2016 - 2020',
       description: 'Graduated with honors. Specialized in software engineering with a focus on mobile application development. Final year project involved developing an AR-based educational platform.'
-    }
+    },
   ];
 
   const certificates = [
