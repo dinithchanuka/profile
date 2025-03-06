@@ -19,7 +19,7 @@ const Projects = () => {
       description: 'A prototype developed to showcase the AR & VR experience of AirGrab to investors. It includes all core features without API integration, focusing on demonstrating functionality. Additional features such as event creation, invitation management, games, branding tools, and a digital wallet for saved content provide an expanded vision of the platform’s potential.',
       technologies: ['Flutter', 'GetX', 'AR Sceneform', 'Google Geospatial API', 'Video Editor', 'Video Editor', 'GPS', 'HTML5 Games', 'Google Services', 'Local Storage',],
       icon: <Smartphone size={24} className={darkMode ? 'text-blue-400' : 'text-blue-600'} />,
-      techIcon: <FlutterIcon className={`w-5 h-5 ${darkMode ? 'text-purple-400' : 'text-purple-600'}`} />
+      techIcon: <FlutterIcon className={`w-5 h-5 ${darkMode ? 'text-blue-400' : 'text-blue-600'}`} />
     },
     {
       title: 'Plurbo',

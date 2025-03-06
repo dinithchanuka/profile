@@ -25,19 +25,19 @@ const Education = () => {
       name: 'Fundamentals of Digital Marketing',
       issuer: 'Google Digital Garage',
       provider: 'Google',
-      link: 'https://learndigital.withgoogle.com/digitalgarage/certificate'
+      link: 'https://drive.google.com/file/d/1afUSrXiyfewb96sHAXixKAyGHOMFGs7H/view?usp=sharing'
     },
     {
       name: 'Java for Android',
       issuer: 'Coursera',
       provider: 'Vanderbilt University',
-      link: 'https://www.coursera.org/account/accomplishments/verify'
+      link: 'https://coursera.org/share/545d06265dc895c56523234a03ac63e0'
     },
     {
       name: 'Mobile App Marketing',
       issuer: 'Udemy',
       provider: 'Udemy',
-      link: 'https://www.udemy.com/certificate'
+      link: 'https://drive.google.com/file/d/1qWxJrRcYJcDnKMth3qmUXYN1bJ7SeI1a/view?usp=drivesdk'
     },
     {
       name: 'Kotlin for Java Developers',

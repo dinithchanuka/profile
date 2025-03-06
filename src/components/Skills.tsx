@@ -15,17 +15,17 @@ const Skills = () => {
     {
       category: 'Frameworks & Technologies',
       icon: <Layers size={20} className={darkMode ? 'text-blue-400' : 'text-blue-600'} />,
-      skills: ['Flutter', 'Android SDK', 'Firebase', 'REST APIs', 'SQLite', 'Figma', 'Git', 'AR & VR', 'IoT']
+      skills: ['Flutter', 'Android SDK', 'Firebase', 'REST APIs', 'SQLite', 'Git', 'AR & VR', 'IoT']
     },
     {
       category: 'Tools & Platforms',
       icon: <Tool size={20} className={darkMode ? 'text-blue-400' : 'text-blue-600'} />,
-      skills: ['Android Studio', 'VS Code', 'XCode', 'Genymotion', 'Firebase', 'Google Play Console', 'Apple Developer', 'GitHub', 'Bitbucket', 'Jira']
+      skills: ['Android Studio', 'VS Code', 'XCode', 'Genymotion', 'Firebase', 'Google Play Console', 'Apple Developer', 'GitHub', 'Bitbucket', 'Jira', 'Figma']
     },
     {
       category: 'Libraries - Android',
       icon: <Cpu size={20} className={darkMode ? 'text-blue-400' : 'text-blue-600'} />,
-      skills: ['Retrofit', 'Glide', 'Dagger-Hilt', 'RxJava/RxKotlin', 'OkHttp']
+      skills: ['Retrofit', 'Glide', 'Dagger-Hilt', 'RxJava / RxKotlin', 'OkHttp']
     },
     {
       category: 'Libraries - Flutter',
@@ -72,19 +72,19 @@ const Skills = () => {
               <div
                 key={categoryIndex}
                 className={`rounded-xl overflow-hidden transition-all duration-300 transform hover:-translate-y-1 ${darkMode
-                    ? 'bg-dark-200/80 shadow-lg shadow-black/20 border border-dark-100 backdrop-blur-sm'
-                    : 'bg-white/90 shadow-md hover:shadow-blue-100 backdrop-blur-sm'
+                  ? 'bg-dark-200/80 shadow-lg shadow-black/20 border border-dark-100 backdrop-blur-sm'
+                  : 'bg-white/90 shadow-md hover:shadow-blue-100 backdrop-blur-sm'
                   }`}
               >
                 <div className={`h-1 ${categoryIndex % 5 === 0
-                    ? 'bg-blue-500'
-                    : categoryIndex % 5 === 1
-                      ? 'bg-purple-500'
-                      : categoryIndex % 5 === 2
-                        ? 'bg-green-500'
-                        : categoryIndex % 5 === 3
-                          ? 'bg-yellow-500'
-                          : 'bg-red-500'
+                  ? 'bg-blue-500'
+                  : categoryIndex % 5 === 1
+                    ? 'bg-purple-500'
+                    : categoryIndex % 5 === 2
+                      ? 'bg-green-500'
+                      : categoryIndex % 5 === 3
+                        ? 'bg-yellow-500'
+                        : 'bg-red-500'
                   }`}></div>
                 <div className="p-6">
                   <div className="flex items-center mb-4">
@@ -101,8 +101,8 @@ const Skills = () => {
                       <div
                         key={skillIndex}
                         className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105 ${darkMode
-                            ? 'bg-dark-300 hover:bg-blue-900/30 hover:border-blue-500/50 border border-transparent'
-                            : 'bg-gray-50 hover:bg-blue-50 hover:border-blue-200 border border-transparent'
+                          ? 'bg-dark-300 hover:bg-blue-900/30 hover:border-blue-500/50 border border-transparent'
+                          : 'bg-gray-50 hover:bg-blue-50 hover:border-blue-200 border border-transparent'
                           }`}
                       >
                         {getSkillIcon(skill) && (
@@ -119,8 +119,8 @@ const Skills = () => {
           </div>
 
           <div className={`mt-12 p-6 rounded-xl ${darkMode
-              ? 'bg-gradient-to-r from-dark-200 to-dark-300 border border-dark-100'
-              : 'bg-gradient-to-r from-blue-50 to-indigo-50'
+            ? 'bg-gradient-to-r from-dark-200 to-dark-300 border border-dark-100'
+            : 'bg-gradient-to-r from-blue-50 to-indigo-50'
             }`}>
             <div className="flex items-center mb-6">
               <div className={`p-3 rounded-lg mr-3 ${darkMode ? 'bg-dark-300' : 'bg-blue-100'
@@ -133,8 +133,8 @@ const Skills = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className={`p-4 rounded-lg transition-transform hover:scale-105 ${darkMode
-                  ? 'bg-gradient-to-br from-dark-300 to-dark-200 border border-dark-100'
-                  : 'bg-white shadow-sm'
+                ? 'bg-gradient-to-br from-dark-300 to-dark-200 border border-dark-100'
+                : 'bg-white shadow-sm'
                 }`}>
                 <div className="flex items-center mb-3">
                   <Terminal className={`w-6 h-6 mr-2 ${darkMode ? 'text-purple-400' : 'text-purple-600'}`} />
@@ -146,8 +146,8 @@ const Skills = () => {
               </div>
 
               <div className={`p-4 rounded-lg transition-transform hover:scale-105 ${darkMode
-                  ? 'bg-gradient-to-br from-dark-300 to-dark-200 border border-dark-100'
-                  : 'bg-white shadow-sm'
+                ? 'bg-gradient-to-br from-dark-300 to-dark-200 border border-dark-100'
+                : 'bg-white shadow-sm'
                 }`}>
                 <div className="flex items-center mb-3">
                   <Server className={`w-6 h-6 mr-2 ${darkMode ? 'text-blue-400' : 'text-blue-600'}`} />
@@ -159,8 +159,8 @@ const Skills = () => {
               </div>
 
               <div className={`p-4 rounded-lg transition-transform hover:scale-105 ${darkMode
-                  ? 'bg-gradient-to-br from-dark-300 to-dark-200 border border-dark-100'
-                  : 'bg-white shadow-sm'
+                ? 'bg-gradient-to-br from-dark-300 to-dark-200 border border-dark-100'
+                : 'bg-white shadow-sm'
                 }`}>
                 <div className="flex items-center mb-3">
                   <Cpu className={`w-6 h-6 mr-2 ${darkMode ? 'text-green-400' : 'text-green-600'}`} />
