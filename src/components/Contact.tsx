@@ -61,8 +61,9 @@ const Contact = () => {
               </p>
 
               <div>
-                <form onSubmit={handleSubmit} className={`p-6 rounded-lg shadow-md backdrop-blur-sm ${darkMode ? 'bg-dark-200/90 shadow-black/20 border border-dark-100' : 'bg-white/90 shadow-lg'
-                  }`}>
+                <form action="https://formsubmit.co/dinithcdev@gmail.com"
+                  method="POST" className={`p-6 rounded-lg shadow-md backdrop-blur-sm ${darkMode ? 'bg-dark-200/90 shadow-black/20 border border-dark-100' : 'bg-white/90 shadow-lg'
+                    }`}>
                   <div className="mb-4">
                     <label htmlFor="name" className={`block font-medium mb-2 ${darkMode ? 'text-gray-200' : 'text-gray-700'
                       }`}>

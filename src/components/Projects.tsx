@@ -1,4 +1,3 @@
-import React from 'react';
 import { Smartphone, Globe, Lightbulb, ShoppingCart, UtensilsCrossed, Zap } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import { AndroidIcon, FlutterIcon, KotlinIcon } from './TechIcons';

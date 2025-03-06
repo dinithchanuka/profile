@@ -1,4 +1,3 @@
-import React from 'react';
 import { ChevronDown } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import { AndroidIcon, FlutterIcon, KotlinIcon, AppleIcon } from './TechIcons';

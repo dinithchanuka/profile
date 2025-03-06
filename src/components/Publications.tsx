@@ -1,4 +1,3 @@
-import React from 'react';
 import { Book, ExternalLink, Github } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 
@@ -29,8 +28,8 @@ const Publications = () => {
                             <div
                                 key={index}
                                 className={`p-6 rounded-xl shadow-lg transition-all duration-300 hover:scale-[1.02] ${darkMode
-                                        ? 'bg-dark-200 shadow-black/20 border border-dark-100'
-                                        : 'bg-white shadow-lg hover:shadow-blue-100'
+                                    ? 'bg-dark-200 shadow-black/20 border border-dark-100'
+                                    : 'bg-white shadow-lg hover:shadow-blue-100'
                                     }`}
                             >
                                 <div className="flex items-center justify-between mb-4">
@@ -52,8 +51,8 @@ const Publications = () => {
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className={`p-2 rounded-lg transition-colors ${darkMode
-                                                    ? 'hover:bg-dark-100 text-gray-400 hover:text-white'
-                                                    : 'hover:bg-gray-100 text-gray-600 hover:text-gray-900'
+                                                ? 'hover:bg-dark-100 text-gray-400 hover:text-white'
+                                                : 'hover:bg-gray-100 text-gray-600 hover:text-gray-900'
                                                 }`}
                                         >
                                             <Github size={20} />
@@ -63,8 +62,8 @@ const Publications = () => {
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className={`p-2 rounded-lg transition-colors ${darkMode
-                                                    ? 'hover:bg-dark-100 text-gray-400 hover:text-white'
-                                                    : 'hover:bg-gray-100 text-gray-600 hover:text-gray-900'
+                                                ? 'hover:bg-dark-100 text-gray-400 hover:text-white'
+                                                : 'hover:bg-gray-100 text-gray-600 hover:text-gray-900'
                                                 }`}
                                         >
                                             <ExternalLink size={20} />

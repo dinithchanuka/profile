@@ -1,4 +1,3 @@
-import React from 'react';
 import { GraduationCap, Calendar, Award, ExternalLink } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 
