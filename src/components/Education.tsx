@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, Calendar, Award } from 'lucide-react';
+import { GraduationCap, Calendar, Award, ExternalLink } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 
 const Education = () => {
@@ -24,23 +24,27 @@ const Education = () => {
     {
       name: 'Fundamentals of Digital Marketing',
       issuer: 'Google Digital Garage',
-      provider: 'Google'
+      provider: 'Google',
+      link: 'https://learndigital.withgoogle.com/digitalgarage/certificate'
     },
     {
       name: 'Java for Android',
       issuer: 'Coursera',
-      provider: 'Vanderbilt University'
+      provider: 'Vanderbilt University',
+      link: 'https://www.coursera.org/account/accomplishments/verify'
     },
     {
       name: 'Mobile App Marketing',
       issuer: 'Udemy',
-      provider: 'Udemy'
+      provider: 'Udemy',
+      link: 'https://www.udemy.com/certificate'
     },
     {
       name: 'Kotlin for Java Developers',
       issuer: 'Coursera',
       provider: 'Vanderbilt University',
-      status: 'On Going'
+      status: 'On Going',
+      link: 'https://www.coursera.org/learn/kotlin-for-java-developers'
     }
   ];
 
@@ -70,8 +74,8 @@ const Education = () => {
                   </div>
 
                   <div className={`p-6 rounded-lg shadow-md transition-all duration-300 hover:scale-[1.02] ${darkMode
-                      ? 'bg-dark-300/80 shadow-black/20 border border-dark-100 backdrop-blur-sm'
-                      : 'bg-white/90 shadow-lg backdrop-blur-sm'
+                    ? 'bg-dark-300/80 shadow-black/20 border border-dark-100 backdrop-blur-sm'
+                    : 'bg-white/90 shadow-lg backdrop-blur-sm'
                     }`}>
                     <div className="flex items-center mb-2">
                       <Calendar size={18} className={darkMode ? 'text-blue-400 mr-2' : 'text-blue-600 mr-2'} />
@@ -82,7 +86,7 @@ const Education = () => {
                       }`}>{education.degree}</h3>
                     <h4 className={`text-lg mb-2 ${darkMode ? 'text-blue-400' : 'text-blue-600'
                       }`}>{education.institution}</h4>
-                    <p className={darkMode ? 'text-gray-300' : 'text-gray-600'}>{education.description}</p>
+
                   </div>
                 </div>
               ))}
@@ -101,8 +105,8 @@ const Education = () => {
                   <div
                     key={index}
                     className={`p-6 rounded-lg shadow-md transition-all duration-300 hover:scale-[1.02] ${darkMode
-                        ? 'bg-dark-300/80 shadow-black/20 border border-dark-100 backdrop-blur-sm'
-                        : 'bg-white/90 shadow-lg backdrop-blur-sm'
+                      ? 'bg-dark-300/80 shadow-black/20 border border-dark-100 backdrop-blur-sm'
+                      : 'bg-white/90 shadow-lg backdrop-blur-sm'
                       }`}
                   >
                     <div className="flex justify-between items-start">
@@ -114,14 +118,27 @@ const Education = () => {
                           via {cert.issuer} from {cert.provider}
                         </p>
                       </div>
-                      {cert.status && (
-                        <span className={`px-3 py-1 rounded-full text-xs font-medium ${darkMode
+                      <div className="flex items-center">
+                        {cert.status && (
+                          <span className={`px-3 py-1 rounded-full text-xs font-medium mr-2 ${darkMode
                             ? 'bg-blue-900/30 text-blue-400 border border-blue-800'
                             : 'bg-blue-100 text-blue-800'
-                          }`}>
-                          {cert.status}
-                        </span>
-                      )}
+                            }`}>
+                            {cert.status}
+                          </span>
+                        )}
+                        <a
+                          href={cert.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`p-1 rounded-lg transition-colors ${darkMode
+                            ? 'hover:bg-dark-200 text-gray-400 hover:text-white'
+                            : 'hover:bg-gray-100 text-gray-600 hover:text-gray-900'
+                            }`}
+                        >
+                          <ExternalLink size={18} />
+                        </a>
+                      </div>
                     </div>
                   </div>
                 ))}

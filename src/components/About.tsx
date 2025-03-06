@@ -21,7 +21,7 @@ const About = () => {
                 } shadow-lg relative group`}>
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                 <img
-                  src="https://i.postimg.cc/d35mYMrP/Whats-App-Image-2025-02-26-at-8-18-40-PM.jpg"
+                  src="src/asset/dinithchanuka.png"
                   alt="Dinith Chanuka Kulasinghe"
                   className="w-full h-auto"
                 />
