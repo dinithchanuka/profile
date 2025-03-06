@@ -2,6 +2,7 @@ import React from 'react';
 import { Code, Smartphone, Zap } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import { AndroidIcon, FlutterIcon, KotlinIcon, AppleIcon } from './TechIcons';
+import dinithImage from '../asset/dinithchanuka.png';
 
 const About = () => {
   const { darkMode } = useTheme();
@@ -21,7 +22,7 @@ const About = () => {
                 } shadow-lg relative group`}>
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                 <img
-                  src="src/asset/dinithchanuka.png"
+                  src={dinithImage}
                   alt="Dinith Chanuka Kulasinghe"
                   className="w-full h-auto"
                 />
