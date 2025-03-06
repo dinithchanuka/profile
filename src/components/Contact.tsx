@@ -150,9 +150,10 @@ const Contact = () => {
             </div>
 
             <div className="space-y-6">
-              <div className={`flex items-center p-4 rounded-lg transform transition-all duration-300 hover:scale-[1.02] ${darkMode ? 'bg-dark-200 hover:bg-dark-300 hover:shadow-lg hover:shadow-black/20' : 'bg-white hover:bg-blue-50 hover:shadow-lg hover:shadow-blue-100/50'
+              <div className={`flex items-center p-4 rounded-lg transform transition-all duration-300 hover:scale-[1.02] ${darkMode ? 'bg-dark-300/80 shadow-black/20 border border-dark-100 backdrop-blur-sm'
+                : 'bg-white/90 shadow-lg backdrop-blur-sm'
                 }`}>
-                <div className={`p-3 rounded-full mr-4 ${darkMode ? 'bg-dark-300' : 'bg-blue-100'
+                <div className={`p-3 rounded-full mr-4 ${darkMode ? 'bg-dark-200 hover:bg-dark-300 hover:shadow-lg hover:shadow-black/20' : 'bg-blue-100'
                   }`}>
                   <Phone className={darkMode ? 'text-blue-400' : 'text-blue-600'} size={20} />
                 </div>
@@ -169,9 +170,10 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className={`flex items-center p-4 rounded-lg transform transition-all duration-300 hover:scale-[1.02] ${darkMode ? 'bg-dark-200 hover:bg-dark-300 hover:shadow-lg hover:shadow-black/20' : 'bg-white hover:bg-blue-50 hover:shadow-lg hover:shadow-blue-100/50'
+              <div className={`flex items-center p-4 rounded-lg transform transition-all duration-300 hover:scale-[1.02] ${darkMode ? 'bg-dark-300/80 shadow-black/20 border border-dark-100 backdrop-blur-sm'
+                : 'bg-white/90 shadow-lg backdrop-blur-sm'
                 }`}>
-                <div className={`p-3 rounded-full mr-4 ${darkMode ? 'bg-dark-300' : 'bg-blue-100'
+                <div className={`p-3 rounded-full mr-4 ${darkMode ? 'bg-dark-200 hover:bg-dark-300 hover:shadow-lg hover:shadow-black/20' : 'bg-blue-100'
                   }`}>
                   <MessageCircle className={darkMode ? 'text-blue-400' : 'text-blue-600'} size={20} />
                 </div>
@@ -188,9 +190,10 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className={`flex items-center p-4 rounded-lg transform transition-all duration-300 hover:scale-[1.02] ${darkMode ? 'bg-dark-200 hover:bg-dark-300 hover:shadow-lg hover:shadow-black/20' : 'bg-white hover:bg-blue-50 hover:shadow-lg hover:shadow-blue-100/50'
+              <div className={`flex items-center p-4 rounded-lg transform transition-all duration-300 hover:scale-[1.02] ${darkMode ? 'bg-dark-300/80 shadow-black/20 border border-dark-100 backdrop-blur-sm'
+                : 'bg-white/90 shadow-lg backdrop-blur-sm'
                 }`}>
-                <div className={`p-3 rounded-full mr-4 ${darkMode ? 'bg-dark-300' : 'bg-blue-100'
+                <div className={`p-3 rounded-full mr-4 ${darkMode ? 'bg-dark-200 hover:bg-dark-300 hover:shadow-lg hover:shadow-black/20' : 'bg-blue-100'
                   }`}>
                   <Mail className={darkMode ? 'text-blue-400' : 'text-blue-600'} size={20} />
                 </div>
@@ -207,9 +210,10 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className={`flex items-center p-4 rounded-lg transform transition-all duration-300 hover:scale-[1.02] ${darkMode ? 'bg-dark-200 hover:bg-dark-300 hover:shadow-lg hover:shadow-black/20' : 'bg-white hover:bg-blue-50 hover:shadow-lg hover:shadow-blue-100/50'
+              <div className={`flex items-center p-4 rounded-lg transform transition-all duration-300 hover:scale-[1.02] ${darkMode ? 'bg-dark-300/80 shadow-black/20 border border-dark-100 backdrop-blur-sm'
+                : 'bg-white/90 shadow-lg backdrop-blur-sm'
                 }`}>
-                <div className={`p-3 rounded-full mr-4 ${darkMode ? 'bg-dark-300' : 'bg-blue-100'
+                <div className={`p-3 rounded-full mr-4 ${darkMode ? 'bg-dark-200 hover:bg-dark-300 hover:shadow-lg hover:shadow-black/20' : 'bg-blue-100'
                   }`}>
                   <Linkedin className={darkMode ? 'text-blue-400' : 'text-blue-600'} size={20} />
                 </div>
@@ -228,9 +232,10 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className={`flex items-center p-4 rounded-lg transform transition-all duration-300 hover:scale-[1.02] ${darkMode ? 'bg-dark-200 hover:bg-dark-300 hover:shadow-lg hover:shadow-black/20' : 'bg-white hover:bg-blue-50 hover:shadow-lg hover:shadow-blue-100/50'
+              <div className={`flex items-center p-4 rounded-lg transform transition-all duration-300 hover:scale-[1.02] ${darkMode ? 'bg-dark-300/80 shadow-black/20 border border-dark-100 backdrop-blur-sm'
+                : 'bg-white/90 shadow-lg backdrop-blur-sm'
                 }`}>
-                <div className={`p-3 rounded-full mr-4 ${darkMode ? 'bg-dark-300' : 'bg-blue-100'
+                <div className={`p-3 rounded-full mr-4 ${darkMode ? 'bg-dark-200 hover:bg-dark-300 hover:shadow-lg hover:shadow-black/20' : 'bg-blue-100'
                   }`}>
                   <Github className={darkMode ? 'text-blue-400' : 'text-blue-600'} size={20} />
                 </div>
@@ -249,9 +254,10 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className={`flex items-center p-4 rounded-lg transform transition-all duration-300 hover:scale-[1.02] ${darkMode ? 'bg-dark-200 hover:bg-dark-300 hover:shadow-lg hover:shadow-black/20' : 'bg-white hover:bg-blue-50 hover:shadow-lg hover:shadow-blue-100/50'
+              <div className={`flex items-center p-4 rounded-lg transform transition-all duration-300 hover:scale-[1.02] ${darkMode ? 'bg-dark-300/80 shadow-black/20 border border-dark-100 backdrop-blur-sm'
+                : 'bg-white/90 shadow-lg backdrop-blur-sm'
                 }`}>
-                <div className={`p-3 rounded-full mr-4 ${darkMode ? 'bg-dark-300' : 'bg-blue-100'
+                <div className={`p-3 rounded-full mr-4 ${darkMode ? 'bg-dark-200 hover:bg-dark-300 hover:shadow-lg hover:shadow-black/20' : 'bg-blue-100'
                   }`}>
                   <Code className={darkMode ? 'text-blue-400' : 'text-blue-600'} size={20} />
                 </div>
