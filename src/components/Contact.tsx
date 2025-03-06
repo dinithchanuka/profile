@@ -23,6 +23,47 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
+    // Collect form data
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData.entries());
+
+    // Convert form data to a message
+    const message = `
+    🚀 New Form Submission 🚀
+    Name: ${data.name}
+    Email: ${data.email}
+    Message: ${data.message}
+  `;
+
+    // Telegram Bot API Token and Chat ID
+    const botToken = "7935776068:AAF8rmN76KohLowzSqbm0T40C7cxUdI9luY";
+    const chatId = "898505420";
+    const apiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+    // Send data to Telegram
+    fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: message,
+      }),
+    })
+      .then((response) => response.json())
+      .then((result) => {
+        if (result.ok) {
+          setSubmitMessage("Form submitted successfully!");
+        } else {
+          setSubmitMessage("Error sending form data!");
+        }
+      })
+      .catch((error) => {
+        alert("Network error! Try again later.");
+        console.error(error);
+      });
+
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitMessage('Thank you for your message! I will get back to you soon.');
@@ -61,9 +102,8 @@ const Contact = () => {
               </p>
 
               <div>
-                <form action="https://formsubmit.co/dinithcdev@gmail.com"
-                  method="POST" className={`p-6 rounded-lg shadow-md backdrop-blur-sm ${darkMode ? 'bg-dark-200/90 shadow-black/20 border border-dark-100' : 'bg-white/90 shadow-lg'
-                    }`}>
+                <form onSubmit={handleSubmit} className={`p-6 rounded-lg shadow-md backdrop-blur-sm ${darkMode ? 'bg-dark-200/90 shadow-black/20 border border-dark-100' : 'bg-white/90 shadow-lg'
+                  }`}>
                   <div className="mb-4">
                     <label htmlFor="name" className={`block font-medium mb-2 ${darkMode ? 'text-gray-200' : 'text-gray-700'
                       }`}>
